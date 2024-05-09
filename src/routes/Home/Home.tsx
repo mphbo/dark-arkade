@@ -10,6 +10,7 @@ import Socials from "./components/Socials";
 import BottomNavbar from "./components/BottomNavbar";
 import { motion } from "framer-motion";
 import SideScroll from "./components/SideScroll";
+import Store from "./components/Store";
 
 function Home() {
   const audio = useRef<null | HTMLAudioElement>(null);
@@ -37,6 +38,9 @@ function Home() {
           </div>
           <div ref={bioRef} className={styles.bioSection}>
             <Bio />
+          </div>
+          <div ref={bioRef} className={styles.bioSection}>
+            <Store />
           </div>
           <div ref={soundcloudRef} className={styles.soundcloudSection}>
             <SoundCloudWidget audio={audio} />
