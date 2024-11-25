@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import Visualizer from "./components/Visualizer/Visualizer";
 import Navbar from "./components/Navbar";
+import Contact from "./components/Contact";
 import styles from "./home.module.scss";
 import SoundCloudWidget from "./components/SoundCloudWidget";
 import Bio from "./components/Bio/Bio";
@@ -39,7 +40,7 @@ function Home() {
             <Bio />
           </div>
           <div className={styles.socialsSection}>
-            <Socials />
+            <Socials footer={false} />
           </div>
           <div ref={soundcloudRef} className={styles.soundcloudSection}>
             <SoundCloudWidget audio={audio} />
@@ -49,6 +50,9 @@ function Home() {
           </div>
           <div ref={emailRef} className={styles.emailSection}>
             <Email />
+          </div>
+          <div ref={emailRef} className={styles.contactSection}>
+            <Contact />
           </div>
         </motion.main>
         <BottomNavbar audio={audio} />

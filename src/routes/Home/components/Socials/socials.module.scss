@@ -6,7 +6,18 @@
     flex-direction: column;
     gap: 10px;
 }
-.listItem {
+
+.footer {
+    max-width: 400px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px 0px;
+}
+
+.listItem, .footerListItem {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -17,6 +28,7 @@
     font-size: 25px;
     color: white;
     text-decoration: none;
+    max-width: 100%;
     img {
         position: absolute;
         font-size: 20px;
@@ -29,4 +41,9 @@
         margin: 0;
         color: white;
     }
+}
+
+.footerListItem {
+    padding: 30px;
+    justify-content: center;
 }

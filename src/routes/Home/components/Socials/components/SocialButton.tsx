@@ -4,13 +4,19 @@ interface SocialButtonProps {
   title: string;
   url: string;
   image: string;
+  footer: boolean;
 }
 
-function SocialButton({ title, url, image }: SocialButtonProps) {
+function SocialButton({ title, url, image, footer }: SocialButtonProps) {
   return (
-    <a href={url} className={styles.listItem} target="_blank" rel="noreferrer">
+    <a
+      href={url}
+      className={footer ? styles.footerListItem : styles.listItem}
+      target="_blank"
+      rel="noreferrer"
+    >
       <img alt={image.split(".")[0]} src={`/${image}`} />
-      <p>{title}</p>
+      {!footer && <p>{title}</p>}
     </a>
   );
 }

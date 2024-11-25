@@ -8,11 +8,6 @@ const socials = [
     image: "instagram.svg",
   },
   {
-    title: "TikTok",
-    url: "https://www.tiktok.com/@dark.arkade",
-    image: "tiktok.svg",
-  },
-  {
     title: "Spotify",
     url: "https://open.spotify.com/artist/2HmJ9J0hLsMp81HvQj7B1l?si=ExqUWDjmRSSm-sZ0TKTUtw",
     image: "spotify.svg",
@@ -22,12 +17,21 @@ const socials = [
     url: "https://soundcloud.com/dark-arkade",
     image: "soundcloud.svg",
   },
+  {
+    title: "TikTok",
+    url: "https://www.tiktok.com/@dark.arkade",
+    image: "tiktok.svg",
+  },
 ];
 
-function Socials() {
-  const socialButtons = socials.map((social) => <SocialButton {...social} />);
+function Socials({ footer = false }: { footer?: boolean }) {
+  const socialButtons = socials.map((social) => (
+    <SocialButton {...social} footer={footer} />
+  ));
 
-  return <ul className={styles.list}>{socialButtons}</ul>;
+  return (
+    <ul className={footer ? styles.footer : styles.list}>{socialButtons}</ul>
+  );
 }
 
 export default Socials;
