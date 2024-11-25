@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Visualizer from "./components/Visualizer/Visualizer";
 import Navbar from "./components/Navbar";
 import Contact from "./components/Contact";
@@ -13,6 +13,7 @@ import { motion } from "framer-motion";
 import SideScroll from "./components/SideScroll";
 
 function Home() {
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const audio = useRef<null | HTMLAudioElement>(null);
 
   const visualizerRef = useRef<null | HTMLDivElement>(null);
@@ -46,7 +47,10 @@ function Home() {
             <Socials footer={false} />
           </div>
           <div ref={soundcloudRef} className={styles.soundcloudSection}>
-            <SoundCloudWidget audio={audio} />
+            <SoundCloudWidget
+              audio={audio}
+              pauseMusic={() => setIsPlaying(false)}
+            />
           </div>
           <div className={styles.sideScrollSection}>
             <SideScroll />
@@ -58,7 +62,11 @@ function Home() {
             <Contact />
           </div>
         </motion.main>
-        <BottomNavbar audio={audio} />
+        <BottomNavbar
+          audio={audio}
+          isPlaying={isPlaying}
+          setIsPlaying={setIsPlaying}
+        />
       </Container>
     </div>
   );
