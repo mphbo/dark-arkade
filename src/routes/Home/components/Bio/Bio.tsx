@@ -9,10 +9,14 @@ function Bio() {
           fontSize: 70,
         }}
       />
+      <img alt="small logo" src="/logo-small.svg" className={styles.logo} />
       <span className={styles.bioText}>
-        DARK ARKADE is a musical journey into the shadows, where melodies,
-        textures, and atmospheres create a captivating and haunting sonic
-        landscape that evoke emotions and stories beyond the ordinary.
+        Have you ever felt like the world you live in isn't real? Have you ever
+        questioned the fabric of this reality? Is it real? Are you real? What is
+        reality? <br /> <br /> The Dark Arkade is not a person, it is not a
+        being. The Dark Arkade is the walls around us, the floor we stand on,
+        the sky above us and the earth below. It is the world we live in whether
+        you believe it or not... Welcome to THE DARK ARKADE 🕹
       </span>
     </div>
   );
