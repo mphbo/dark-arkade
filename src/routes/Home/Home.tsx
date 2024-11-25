@@ -37,6 +37,9 @@ function Home() {
             <Visualizer audio={audio} />
           </div>
           <div ref={bioRef} className={styles.bioSection}>
+            <video className={styles.video} muted autoPlay loop>
+              <source src="/cyberdelia-video.mp4" type="video/mp4" />
+            </video>
             <Bio />
           </div>
           <div className={styles.socialsSection}>

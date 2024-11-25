@@ -23,11 +23,18 @@
   justify-content: center;
   align-items: center;
   background-color: #80abbe;
-  background-image: url('../../assets/bio-arkade2.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   background-blend-mode: multiply;
+  .video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 1;
+    max-width: 1200px;
+  }
 }
 
 .soundcloudSection {
