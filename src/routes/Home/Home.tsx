@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 import SideScroll from "./components/SideScroll";
 
 function Home() {
-  const [isPlaying, setIsPlaying] = useState<boolean>(false);
+  const [isPlaying, setIsPlaying] = useState<boolean>(true);
   const audio = useRef<null | HTMLAudioElement>(null);
 
   const visualizerRef = useRef<null | HTMLDivElement>(null);
