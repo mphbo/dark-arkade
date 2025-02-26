@@ -56,6 +56,9 @@ function Home() {
             <SideScroll />
           </div>
           <div ref={emailRef} className={styles.emailSection}>
+            <video className={styles.video} muted autoPlay loop>
+              <source src="/visual.mp4" type="video/mp4" />
+            </video>
             <Email />
           </div>
           <div ref={emailRef} className={styles.contactSection}>

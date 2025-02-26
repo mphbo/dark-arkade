@@ -41,7 +41,7 @@
   color: black;
   height: 90vh;
   background-color: black;
-  background-image: url('../../assets/sc-arkade2.jpeg');
+  // background-image: url('../../assets/sc-arkade2.jpeg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -73,6 +73,15 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  background-blend-mode: multiply;
+  .video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 1;
+    max-width: 1200px;
+  }
 }
 
 .contactSection {
